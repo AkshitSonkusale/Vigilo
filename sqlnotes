@@ -1,0 +1,27 @@
+# SQL Analytics Layer – Notes
+
+Built in PostgreSQL. Sits before the ML pipeline — raw campaign data is processed here first, then passed to the Python pipeline.
+
+---
+
+## Queries
+
+### 1. Campaign Performance Aggregation
+Aggregates raw campaign data by campaign ID — sums spend, clicks, conversions, and calculates derived metrics like CTR and CPC.
+
+### 2. Running Totals (Window Function)
+Uses `SUM() OVER (PARTITION BY campaign_id ORDER BY date)` to calculate cumulative spend per campaign over time — useful for spotting budget burn rate.
+
+### 3. Performance Ranking (Window Function)
+Uses `RANK() OVER (ORDER BY conversion_rate DESC)` to rank campaigns by conversion rate — feeds into health score context.
+
+### 4. Underperformer CTE
+A CTE that isolates campaigns where spend is above average but conversions are below average — direct input signal for the anomaly detection stage.
+
+### 5. Monthly Trend Aggregation
+Groups campaign metrics by month using `DATE_TRUNC('month', date)` — used for trend analysis in the frontend dashboard.
+
+---
+
+## Design Decision
+Analytics layer is deliberately separated from the ML pipeline. SQL handles aggregation and preprocessing; Python handles modeling. Keeps concerns clean and makes the pipeline easier to debug.

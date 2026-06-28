@@ -16,19 +16,13 @@ app = FastAPI(
     version="0.1.0",
 )
 
-# Allow local dev + deployed Vercel frontend
-# Add your Vercel URL here once deployed e.g. https://vigilo.vercel.app
-ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://localhost:5173",
-    "http://127.0.0.1:5500",
-    os.environ.get("FRONTEND_URL", ""),   # set on Render dashboard
-]
-
+# CORS — allow the deployed frontend (and local dev) to call this API.
+# For a portfolio demo we allow all origins; tighten to your Vercel
+# URL in production by setting FRONTEND_URL.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[o for o in ALLOWED_ORIGINS if o],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )

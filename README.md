@@ -6,7 +6,7 @@ Vigilo analyses Google Ads campaigns using machine learning and tells you exactl
 
 ## Live Demo
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Vigilo-D4A853?style=for-the-badge)](https://YOUR-VERCEL-URL.vercel.app)
-[![API](https://img.shields.io/badge/API-Render-46E3B7?style=for-the-badge)](https://vigilo-backend-oci2.onrender.com)
+
 [![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=for-the-badge&logo=github)](https://github.com/AkshitSonkusale/Vigilo)
 
 ---

@@ -5,7 +5,7 @@
 Vigilo analyses Google Ads campaigns using machine learning and tells you exactly where your budget is being wasted — and what to do about it.
 
 ## Live Demo
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Vigilo-D4A853?style=for-the-badge)](https://YOUR-VERCEL-URL.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vigilo-D4A853?style=for-the-badge)](https://vigilo-v1.vercel.app/)
 
 [![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=for-the-badge&logo=github)](https://github.com/AkshitSonkusale/Vigilo)
 

@@ -5,8 +5,8 @@
 Vigilo analyses Google Ads campaigns using machine learning and tells you exactly where your budget is being wasted — and what to do about it.
 
 ## Live Demo
-**Frontend:** [vigilo.vercel.app](https://vigilo.vercel.app) *(deploy to update)*  
-**Backend:** [vigilo-backend.onrender.com](https://vigilo-backend.onrender.com) *(deploy to update)*
+**Frontend:** Deploying soon !
+**Backend:** Deploying soon !
 
 ---
 
